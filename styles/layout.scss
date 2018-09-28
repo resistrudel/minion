@@ -1,0 +1,491 @@
+/* Include the files we're dependent on. */
+//@import "../../_bourbon/bourbon";
+@import "components/partials/normalize";
+@import "components/partials/variables";
+@import "components/partials/extends";
+@import "components/partials/common";
+@import "components/partials/type";
+@import "components/partials/form";
+@import "components/partials/derrick";
+@import "components/partials/quiz";
+//@import "components/partials/video";
+
+.intro {
+  background: $white;
+  position: relative;
+  height: 1009px;
+  .wrapper {
+    position: relative;
+    height: 100%;
+    header {
+      z-index: 100;
+      top: 0;
+      left: 0;
+      width: 100%;
+      .header-wrapper {
+        max-width: 1000px;
+        padding: 0 16em 0 4em;
+        margin: 0 auto;
+        @extend .clearfix;
+
+        .brand-logo, .client-logo {
+          @extend %text-hide;
+          background: $sprite-url no-repeat 0 0;
+          transition: all 0.3s ease;
+        }
+
+        .brand-logo {
+          @include background-sprite(91px, 52px, 0, 0, 40vw);
+          float: left;
+        }
+        .client-logo {
+          @include background-sprite(321px, 330px, -228px, 0, 35vw);
+          float: right;
+        }
+      }
+
+    }
+    .text-box {
+      margin-top: 5em;
+      float: right;
+      width: 50%;
+      h1 {
+        color: #E7B219;
+      }
+      p {
+        color: $feature-color;
+      }
+      .cta, .watch {
+        display: inline-block;
+      }
+      .cta {
+        margin-right: 1.5em;
+      }
+      .watch {
+        position: relative;
+        margin-left: 1.5em;
+        text-transform: uppercase;
+        a {
+          padding-left: 0.5em;
+        }
+        @media(max-width: 470px) {
+          margin-top: 2em;
+        }
+        &:before {
+          @extend %empty-block;
+          @include background-sprite(20px, 18px, -1px, -76px, 35vw);
+          top: 50%;
+          right: 100%;
+          transform: translateY(-70%);
+        }
+
+      }
+    }
+    &:after {
+      @extend %empty-block;
+      @include background-sprite(410px, 740px, 0, -398px, 50vw);
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.minions {
+  height: 0;
+  padding-bottom: 37%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  &:before {
+    background: #000 url("../img/minions2.jpg") center center/ 100% auto no-repeat;
+    content: " ";
+    height: 100%;
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: -3;
+  }
+}
+
+.video {
+  padding: 5em 0 7em;
+  background: $black;
+  color: $white;
+  text-align: center;
+  .no-js #video .wrapper {
+    max-width: 740px;
+  }
+
+  .stretching {
+    margin: 0 auto;
+    transition: width 0.5s ease;
+    max-width: 100%;
+    &.playing {
+      @media (min-width: 740px) {
+        width: 100%;
+      }
+    }
+  }
+  .iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 56.2%;
+    position: relative;
+    top: 0;
+    left: 0;
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.tickets {
+  background: #53bbfe;
+  color: $white;
+  position: relative;
+  &:before {
+    @extend %empty-block;
+    background: url("../img/bg-1.jpg") 43% center/ cover no-repeat;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .wrapper {
+    .text-box {
+      width: 50%;
+      float: right;
+      padding: 6em 5em;
+      .cta a {
+        &:hover, &:active, &:focus {
+          color: $black;
+          background: #ffd747;
+        }
+      }
+    }
+  }
+}
+
+.column {
+  max-width: 660px;
+  margin: auto;
+}
+
+
+
+//.competition {
+//  background-color: inherit;
+//  color: $competition-text-color;
+//  text-align: left;
+  h2 {
+    color: #53bbfe;
+    font-size: 3em;
+  }
+  .form-wrapper {
+    &.thank-you {
+      padding-top: 40em;
+      padding-bottom: 200px;
+      text-align: center;
+    }
+    display: none;
+    .form-container {
+      background: $white;
+    }
+  }
+
+  a {
+    font-weight: 700;
+  }
+
+//  p {
+//    font-size: 1.5em;
+//  }
+
+  .cta {
+    text-align: center;
+    background-color: $feature-color;
+    color: $white;
+    button {
+      background: transparent;
+    }
+    display: inline-block;
+    margin: 2em auto 0;
+    float: none;
+    button {
+      text-transform: uppercase;
+    }
+  }
+
+  .question {
+    display: none;
+  }
+  .competition-question {
+    clear: left;
+    .selectPrize {
+      width: 50%;
+      float: left;
+      padding: 0 5em 6em;
+    }
+    .question-container {
+      font-size: 1.6em;
+      margin: 1em 0;
+
+    }
+    .answers-container {
+      ul {
+        list-style: none;
+        li {
+          margin: 1em 2em 2em 0;
+          font-size: 1.2em;
+          display: block;
+          width: 305px;
+          height: 225px;
+          position: relative;
+          perspective: 1000px;
+          cursor: pointer;
+          border-radius: 3px;
+          &:hover .front, &.hover .front {
+            transform: rotateY(180deg);
+          }
+          &:hover .back, &.hover .back{
+            transform: rotateY(360deg);
+          }
+          &.clicked {
+            & .back {
+              transform: rotateY(360deg);
+              border-radius: 3px;
+            }
+          }
+          &.clicked {
+            & .front {
+              transform: rotateY(180deg);
+              border-radius: 3px;
+            }
+          }
+          .front {
+            cursor: pointer;
+            border-radius: 3px;
+            transition: 0.6s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+            z-index: 2;
+            /* for firefox 31 */
+            transform: rotateY(0deg);
+
+
+          }
+          .back {
+            cursor: pointer;
+            border-radius: 3px;
+            transition: 0.6s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background-color: $feature-color;
+            display: table;
+            &:after {
+              @extend %empty-block;
+              background: rgba(113, 175, 211, 0.6);
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+            input {
+              display: none;
+            }
+            label {
+              border-radius: 3px;
+              color: $white;
+              position: relative;
+              z-index: 100;
+              padding: 1em;
+              text-align: center;
+              height: 100%;
+              cursor: pointer;
+              display: table-cell;
+              vertical-align: middle;
+            }
+
+          }
+          &:first-of-type .front, &:first-of-type .back {
+            background: url("../img/prize1.jpg") 0 0/ cover no-repeat;
+          }
+          &:nth-of-type(2) .front, &:nth-of-type(2) .back {
+            background: url("../img/prize2.jpg") 0 0/ cover no-repeat;
+          }
+        }
+      }
+    }
+  }
+  .competition-optins {
+    margin-top: 5em;
+    p {
+      label {
+        font-size: 1em;
+        color: $form-optin-label-color;
+      }
+    }
+    &.cta {
+      text-align: center;
+    }
+  }
+  small {
+    text-align: right;
+    display: block;
+  }
+//}
+
+//@media (max-width: 1300px) {
+//  .tickets {
+//    &:before {
+//      background-position: center center;
+//    }
+//  }
+//}
+
+
+@media (max-width: 970px) {
+  .intro {
+    height: auto;
+    .wrapper {
+      header {
+        .header-wrapper {
+          padding: 0;
+        }
+      }
+      .text-box {
+        width: 90%;
+        float: none;
+        margin: 5em auto;
+      }
+      &:after {
+        position: static;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .minions {
+    background: url("../img/minions.jpg") center center/ 100% auto no-repeat;
+  }
+}
+
+@media (max-width: 830px) {
+  .tickets {
+    padding-bottom: 36%;
+    &:before {
+      width: 100%;
+      bottom: 0;
+      background-size: 100% auto;
+      background-position: 0 100%;
+    }
+    .wrapper {
+      .text-box {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+
+  .quiz {
+    padding-bottom: 55%;
+    &:before {
+      width: 100%;
+      bottom: 0;
+      background-size: 100% auto;
+      background-position: 0 100%;
+    }
+    .wrapper {
+      .quiz-container {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+
+  .competition-question {
+    .selectPrize {
+      width: 90%;
+      padding: 0 0 6em 0;
+    }
+    .answers-container {
+      ul {
+        li {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  color: #7a7a7a;
+  background-color: #eeeeee;
+  .wrapper {
+    position: relative;
+    span:first-of-type {
+      margin-right: 2em;
+    }
+    span:nth-of-type(2) {
+      text-align: center;
+    }
+    &:before, &:after {
+      @extend %empty-block;
+      @include background-sprite(83px, 24px, -1px, -113px);
+      top: 50%;
+      transform: translateY(-50%);
+      @media(max-width: 885px) {
+        bottom: 0;
+        transform: translateY(50%);
+      }
+    }
+    &:before {
+      @include background-sprite(83px, 24px, -1px, -113px);
+      right: 100px;
+      @media(max-width: 885px) {
+        right: calc(50% - 100px);
+      }
+    }
+    &:after {
+      @include background-sprite(50px, 33px, 0, -161px);
+      right: 0;
+      @media(max-width: 885px) {
+        right: 50%;
+      }
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.krux {
+  height: 0;
+  overflow: hidden;
+}
+
+@import "components/partials/responsive";

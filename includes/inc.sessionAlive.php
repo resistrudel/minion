@@ -1,0 +1,1 @@
+<?php	ini_set('session.gc_maxlifetime',86400);	ini_set('session.cache_expire',1440);	session_start();	$_SESSION['keepAliveTime']=date('dMYHisu');?>

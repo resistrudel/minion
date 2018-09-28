@@ -1,0 +1,93 @@
+/* Common classes/helpers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  background: $white;
+  font-family: $standard-font;
+  font-size: 10px;
+  color: $text-color;
+  margin: 0 auto;
+  text-align: left;
+}
+.wrapper {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  padding: 3em 2em;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  &:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .text-box {
+    max-width: 810px;
+    margin: auto;
+  }
+}
+
+#frame {
+  width: 100%;
+  min-width: 1000px;
+  overflow: hidden;
+}
+
+@media(max-width: 1020px) {
+  #frame {
+    min-width: 100%;
+  }
+}
+
+.no-media {
+  .wrapper {
+    max-width: 980px;
+  }
+  #frame {
+    min-width: 1000px;
+  }
+}
+
+.ie8 {
+  .wrapper {
+    max-width: 980px;
+  }
+  #frame {
+    min-width: 1000px;
+  }
+}
+
+.clearfix:after {
+  clear: both;
+  height: 0;
+  content: ' ';
+  font-size: 0;
+  display: block;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+strong {
+  font-weight: 700;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}

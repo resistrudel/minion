@@ -1,0 +1,160 @@
+/* RADIOS AND CHECKBOXES */
+
+.form-container, .user-details, .optins-container, .question {
+
+  input {
+    &.date {
+      width: 32%;
+      margin-right: 2%;
+      float: left;
+    }
+    &:last-child {
+      margin: 0;
+      float: right;
+    }
+    &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+      color: #000;
+      font-style: italic;
+    }
+    &[type="text"],
+    &[type="email"],
+    &[type="file"],
+    &[type="phone"],
+    &[type="password"],
+    &[type="tel"] {
+      @extend %standard-input;
+    }
+    &[type="checkbox"] + label:before {
+      border: 1px solid $form-checkbox-border;
+      background: transparent;
+      border-radius: 3px;
+      transition: none;
+    }
+    &[type="radio"]:checked + label {
+      border: 5px solid $white;
+    }
+    &[type="checkbox"]:checked + label:before {
+      background-color: $form-radio-button-select-bg;
+    }
+    &[type="radio"]:focus + label:before,
+    &[type="checkbox"]:focus + label:before,
+    &[type="text"]:focus,
+    &[type="email"]:focus,
+    &[type="file"]:focus,
+    &[type="tel"]:focus {
+      @extend %generic-box-shadow;
+    }
+  }
+
+  select {
+    @extend %standard-input;
+    &:focus {
+      @extend %generic-box-shadow;
+    }
+  }
+
+  textarea {
+    min-height: 5em;
+    max-width: 687px;
+    @extend %standard-input;
+    &:focus {
+      @extend %generic-box-shadow;
+    }
+  }
+
+  fieldset {
+    border: 0;
+    input, select {
+      opacity: 0.7;
+      &[type="radio"] + label:before,
+      &[type="checkbox"] + label:before {
+        width: 1.3em;
+        height: 1.3em;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s ease;
+      }
+      &[type="checkbox"] + label:before {
+        top: 20%;
+      }
+      &[type="radio"] + label:before {
+        content: none;
+      }
+      &[type="radio"] + label,
+      &[ type="checkbox" ] + label {
+        display: block;
+        position: relative;
+      }
+      &[ type="checkbox" ] + label {
+        padding-left: 2em;
+      }
+    }
+  }
+
+  label {
+//    @extend p;
+    color: $form-text-color;
+  }
+
+  a + a.fake, input[type="radio"], input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    position: absolute;
+  }
+}
+
+.ie8 {
+  label:before {
+    display: none !important;
+  }
+  input[type="radio"], input[type="checkbox"] {
+    opacity: 1 !important;
+    margin-right: 0.5em;
+    width: auto;
+  }
+  input#dateOfBirth_year {
+    margin: 0;
+    float: right;
+  }
+}
+
+/* LABEL COLOURS */
+dt label, div label {
+  color: $form-text-color;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0.5em 0 0.3em;
+  font-size: 1.5em;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+dd {
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.error, .req {
+  color: $error-text-color;
+  font-style: italic;
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.error {
+  background-color: $error-bg-color;
+  padding: 4px;
+  margin-top: 1em;
+}
+
+/* QUESTION AND ANSWERS */
+.answer-length {
+  text-align: right;
+  font-size: 1.4em;
+  &.less-than-0 {
+    color: $feature-color;
+  }
+}

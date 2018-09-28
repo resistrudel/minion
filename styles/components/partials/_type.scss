@@ -1,0 +1,45 @@
+body {
+  text-align: left;
+  color: $text-color;
+  font-family: $standard-font;
+//  font-size: 10px;
+  $map: (320px: 8px, 600px: 9px, 740px: 10px);
+  @include poly-fluid-sizing('font-size', $map);
+}
+//@media(max-width: $medium-screen-width) {body {font-size: 9px;}}
+//@media(max-width: $small-screen-width) {body {font-size: 8px;}}
+
+
+h1, h2, h3, h4, h5, .cta {text-transform: uppercase;}
+h1, h2, h3, h4, h5 {
+  margin-bottom: 0.75em;
+  font-family: $heading-font;
+}
+
+
+h1 {
+  font-size: 3.2em;
+}
+h2 { font-size: 4em; }
+h3 { font-size: 2.4em; }
+h4 {}
+h5 {}
+
+p {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  margin-bottom: 1.2em;
+}
+
+.cta {
+  @extend %cta;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all .5s ease;
+
+  &:active, &:hover, &:focus {  }
+  img { border: none; }
+}

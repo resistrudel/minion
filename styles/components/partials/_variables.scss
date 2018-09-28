@@ -1,0 +1,42 @@
+// Font families
+$standard-font: 'futura-pt', Helvetica, Arial, sans-serif;
+$heading-font: $standard-font;
+
+// Repeated colours
+$feature-color: #f47d1c;
+$primary-color: #001c54;
+$secondary-color: #002373;
+$text-color: #444;
+$white: #fff;
+$black: #000;
+$grey: #a6bcc4;
+
+$competition-text-color: $text-color;
+$form-text-color: $competition-text-color;
+$form-radio-button-select-bg: $black;
+$form-radio-button-border: $feature-color;
+$form-checkbox-border: $text-color;
+$form-checkbox-select-bg: $black;
+$form-label-color: $competition-text-color;
+$form-optin-label-color: $competition-text-color;
+$error-text-color: $white;
+$error-bg-color: $feature-color;
+
+// Screen widths
+$max-wrapper: 900px;
+
+$max-screen-width: 980px;
+$large-screen-width: 920px;
+
+$medium-screen-width: 740px;
+$small-screen-width: 600px;
+$tiny-screen-width: 400px;
+
+$text-box-max-width: 500px;
+
+
+
+// Urls
+$sprite-url: url(../img/sprite.png);
+$sprite-width: 545px;
+$sprite-height: 1138px;

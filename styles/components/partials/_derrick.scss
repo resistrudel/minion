@@ -1,0 +1,34 @@
+.social-connect-container {
+  background: #eceaeb;
+  &>.component {
+    background: #eceaeb;
+    text-align: center;
+  }
+  .form {
+    text-align: left;
+  }
+  label.field__label {
+    color: $text-color;
+    font-size: 1em;
+  }
+  .grid-row__col--2 {
+    float: none;
+  }
+  .wrapper {
+    padding: 3em 2em 0;
+    .text-box {
+      text-align: center;
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+}
+@media (min-width: 1024px) {
+  .social-connect-container {
+    .grid-row {
+      text-align: center;
+    }
+  }
+}

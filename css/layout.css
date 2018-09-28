@@ -1,0 +1,53 @@
+/*
+Error: File to import not found or unreadable: ../../_bourbon/bourbon.
+       Load paths:
+         /Users/theresa.morcos/Documents/projects/t/newTemplate/styles
+         /Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/bourbon
+         Sass::Globbing::Importer
+        on line 2 of /Users/theresa.morcos/Documents/projects/t/newTemplate/styles/layout.scss
+
+1: /* Include the files we're dependent on. *\/
+2: @import "../../_bourbon/bourbon";
+3: @import "components/partials/normalize";
+4: @import "components/partials/variables";
+5: @import "components/partials/common";
+6: @import "components/partials/type";
+7: @import "components/partials/extends";
+
+Backtrace:
+/Users/theresa.morcos/Documents/projects/t/newTemplate/styles/layout.scss:2
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/import_node.rb:45:in `import'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:20:in `render'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:278:in `render'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:423:in `run'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:52:in `parse'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:19:in `parse!'
+/Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/scss/bin/scss:13:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ../../_bourbon/bourbon.\A        Load paths:\A          /Users/theresa.morcos/Documents/projects/t/newTemplate/styles\A          /Users/theresa.morcos/Downloads/CodeKit.app/Contents/Resources/engines/bourbon\A          Sass::Globbing::Importer\A         on line 2 of /Users/theresa.morcos/Documents/projects/t/newTemplate/styles/layout.scss\A \A 1: /* Include the files we're dependent on. */\A 2: @import \"../../_bourbon/bourbon\";\A 3: @import \"components/partials/normalize\";\A 4: @import \"components/partials/variables\";\A 5: @import \"components/partials/common\";\A 6: @import \"components/partials/type\";\A 7: @import \"components/partials/extends\";"; }
